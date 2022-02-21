@@ -1,5 +1,7 @@
 package org.itstep.step01;
 
+import java.util.Arrays;
+
 /**
  * Класс для тестирования кортежа ObjectPair
  *
@@ -18,9 +20,9 @@ public class ObjectPairDriver {
         ObjectPair[] stadiums = new ObjectPair[3];
         stadiums[0] = new ObjectPair("Bridgeforth Stadium", 25000);
         stadiums[1] = new ObjectPair("Michigan Stadium", 109901);
-        stadiums[2] = new ObjectPair("Lane Stadium", "66,233");
+        stadiums[2] = new ObjectPair("Lane Stadium", 66233);
 
-        System.out.println(stadiums[0]);
+       // System.out.println(stadiums[0]);
 
         System.out.println(largestStadium(stadiums));
     }
@@ -33,8 +35,17 @@ public class ObjectPairDriver {
      */
     public static String largestStadium(ObjectPair[] stadiums) {
         // TODO: реализуйте это метод в соответствии с комментариями
-
-        return "";
+        System.out.println("Название стадиона с наибольшей вместимостью: ");
+        System.out.println(" ");
+        int idx = 0;
+        int max = (int) stadiums[idx].getSecond();
+        for (int i = 1; i<stadiums.length; i++){
+            if ((int) stadiums[i].getSecond()>max){
+                idx = i;
+                max= (int) stadiums[i].getSecond();
+            }
+        }
+        return stadiums[idx].getFirst().toString();
     }
 
 }

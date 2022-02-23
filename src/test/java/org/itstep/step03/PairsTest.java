@@ -76,7 +76,7 @@ class PairsTest {
 
     @Test
     public void testPairsDoubleRemoveThrowsException() {
-        fail("Раскомментируйте тест после реализации класса Pairs");
+       // fail("Раскомментируйте тест после реализации класса Pairs");
         Pairs<String, Integer> pairs = new Pairs<String, Integer>();
         for (int i = 0; i < 15; i++) {
             pairs.addPair("A" + i, i);
